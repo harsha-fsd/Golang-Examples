@@ -1,0 +1,13 @@
+syntax = "proto3";
+option go_package = "./;apiproto";
+
+service Date{
+    rpc GetDateTime(RequestDateTime) returns(DateTime);
+}
+message DateTime{
+    string Value = 1;
+}
+
+message RequestDateTime {
+    string Value = 2;
+}

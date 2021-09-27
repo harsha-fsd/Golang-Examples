@@ -50,7 +50,7 @@ func handleConnection(c net.Conn) {
 			break
 		}
 		fmt.Println("clientId-" + fmt.Sprintf("%d", clientId) + ":" + clientMsg)
-		//reply back to the client
+		//reply back to the client q
 		c.Write([]byte("Thanks for the message!"))
 	}
 	c.Close()
